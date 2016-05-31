@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <!-- Header -->
         <div class="navbar-header">  <!-- this div is for toggle navbar when webpage size is small  -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -19,7 +19,8 @@
         </div>
 
         <!-- Items-->
-        <div class = "collapse navbar-collapse">
+        <div class = "collapse navbar-collapse" id="topNavBar">
+
             <ul class="nav navbar-nav">
                 <li class="active">
                     <a href="{% url 'music:index' %}">
@@ -31,8 +32,15 @@
                         <span class = "glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp; Songs
                     </a>
                 </li>
-
             </ul>
+
+            <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" value="">
+                </div>
+                <button type="submit" class="btn btn-defualt">Search</button>
+            </form>
+
         </div>
     </div>
 </nav>
